@@ -1315,7 +1315,7 @@
               </div>
               <div>
                 <div class="contact-item-label">Email</div>
-                <div class="contact-item-value"><span class="email-reveal" data-link="true"></span></div>
+                <div class="contact-item-value"><a href="<!--email_off-->mailto:eagleplumbing@hotmail.com<!--/email_off-->"><!--email_off-->eagleplumbing@hotmail.com<!--/email_off--></a></div>
               </div>
             </div>
           </div>
@@ -1373,7 +1373,7 @@
               </div>
               <div>
                 <div class="contact-item-label">Email</div>
-                <div class="contact-item-value"><span class="email-reveal" data-link="true"></span></div>
+                <div class="contact-item-value"><a href="<!--email_off-->mailto:eagleplumbing@hotmail.com<!--/email_off-->"><!--email_off-->eagleplumbing@hotmail.com<!--/email_off--></a></div>
               </div>
             </div>
             <div class="contact-item">
@@ -1478,7 +1478,7 @@
           <div class="footer-col-title">Contact</div>
           <ul class="footer-links">
             <li><a href="tel:5875667750">587-566-7750</a></li>
-            <li><span class="email-reveal" data-link="true"></span></li>
+            <li><a href="<!--email_off-->mailto:eagleplumbing@hotmail.com<!--/email_off-->"><!--email_off-->eagleplumbing@hotmail.com<!--/email_off--></a></li>
             <li style="color:var(--muted);font-size:.9rem;line-height:1.6">Edmonton, Alberta<br>Canada</li>
           </ul>
         </div>
@@ -1640,25 +1640,6 @@
       }, 16);
     }
 
-  </script>
-
-  <script>
-    (function() {
-      var e = String.fromCharCode(101,97,103,108,101,112,108,117,109,98,105,110,103,64,104,111,116,109,97,105,108,46,99,111,109);
-      document.querySelectorAll('.email-reveal').forEach(function(el) {
-        if (el.getAttribute('data-link') === 'true') {
-          var a = document.createElement('a');
-          a.href = String.fromCharCode(109,97,105,108,116,111,58) + e;
-          a.textContent = e;
-          a.style.transition = 'color .2s';
-          a.onmouseover = function() { this.style.color = 'var(--teal-light)'; };
-          a.onmouseout  = function() { this.style.color = ''; };
-          el.appendChild(a);
-        } else {
-          el.textContent = e;
-        }
-      });
-    })();
   </script>
 </body>
 </html>
