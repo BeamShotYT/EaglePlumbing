@@ -1644,21 +1644,18 @@
 
   <script>
     (function() {
-      var user = 'eagleplumbing';
-      var domain = 'hotmail.com';
-      var addr = user + '@' + domain;
-      var spans = document.querySelectorAll('.email-reveal');
-      spans.forEach(function(el) {
+      var e = String.fromCharCode(101,97,103,108,101,112,108,117,109,98,105,110,103,64,104,111,116,109,97,105,108,46,99,111,109);
+      document.querySelectorAll('.email-reveal').forEach(function(el) {
         if (el.getAttribute('data-link') === 'true') {
           var a = document.createElement('a');
-          a.href = 'mailto:' + addr;
-          a.textContent = addr;
+          a.href = String.fromCharCode(109,97,105,108,116,111,58) + e;
+          a.textContent = e;
           a.style.transition = 'color .2s';
           a.onmouseover = function() { this.style.color = 'var(--teal-light)'; };
           a.onmouseout  = function() { this.style.color = ''; };
           el.appendChild(a);
         } else {
-          el.textContent = addr;
+          el.textContent = e;
         }
       });
     })();
