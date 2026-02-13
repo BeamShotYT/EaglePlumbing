@@ -1315,7 +1315,7 @@
               </div>
               <div>
                 <div class="contact-item-label">Email</div>
-                <div class="contact-item-value"><a href="/cdn-cgi/l/email-protection#4d282c2a21283d2138202f24232a0d252239202c2421632e2220"><span class="__cf_email__" data-cfemail="cda8acaaa1a8bda1b8a0afa4a3aa8da5a2b9a0aca4a1e3aea2a0">[email&#160;protected]</span></a></div>
+                <div class="contact-item-value"><span class="email-reveal" data-link="true"></span></div>
               </div>
             </div>
           </div>
@@ -1373,7 +1373,7 @@
               </div>
               <div>
                 <div class="contact-item-label">Email</div>
-                <div class="contact-item-value"><a href="/cdn-cgi/l/email-protection#8beeeaece7eefbe7fee6e9e2e5eccbe3e4ffe6eae2e7a5e8e4e6"><span class="__cf_email__" data-cfemail="583d393f343d28342d353a31363f1830372c35393134763b3735">[email&#160;protected]</span></a></div>
+                <div class="contact-item-value"><span class="email-reveal" data-link="true"></span></div>
               </div>
             </div>
             <div class="contact-item">
@@ -1478,7 +1478,7 @@
           <div class="footer-col-title">Contact</div>
           <ul class="footer-links">
             <li><a href="tel:5875667750">587-566-7750</a></li>
-            <li><a href="/cdn-cgi/l/email-protection#e88d898f848d98849d858a81868fa880879c85898184c68b8785"><span class="__cf_email__" data-cfemail="44212523282134283129262d2a23042c2b3029252d286a272b29">[email&#160;protected]</span></a></li>
+            <li><span class="email-reveal" data-link="true"></span></li>
             <li style="color:var(--muted);font-size:.9rem;line-height:1.6">Edmonton, Alberta<br>Canada</li>
           </ul>
         </div>
@@ -1640,6 +1640,28 @@
       }, 16);
     }
 
+  </script>
+
+  <script>
+    (function() {
+      var user = 'eagleplumbing';
+      var domain = 'hotmail.com';
+      var addr = user + '@' + domain;
+      var spans = document.querySelectorAll('.email-reveal');
+      spans.forEach(function(el) {
+        if (el.getAttribute('data-link') === 'true') {
+          var a = document.createElement('a');
+          a.href = 'mailto:' + addr;
+          a.textContent = addr;
+          a.style.transition = 'color .2s';
+          a.onmouseover = function() { this.style.color = 'var(--teal-light)'; };
+          a.onmouseout  = function() { this.style.color = ''; };
+          el.appendChild(a);
+        } else {
+          el.textContent = addr;
+        }
+      });
+    })();
   </script>
 </body>
 </html>
